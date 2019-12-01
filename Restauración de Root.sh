@@ -37,23 +37,23 @@ echo "Se crearán los siguientes directorios: \
 
 /boot/efi \
 
-/tmp\
+/tmp \
 
-/proc\
+/proc \
 
-/mnt\
+/mnt \
 
-/dev\
+/dev \
 
-/sys\
+/sys \
 
-/run\
+/run \
 
-/media\
+/media \
 
-/var/log\
+/var/log \
 
-/var/tmp
+/var/tmp"
 
 read -p "Pulsa cualquier tecla para crear los directorios"
 mkdir $destino/boot/efi
