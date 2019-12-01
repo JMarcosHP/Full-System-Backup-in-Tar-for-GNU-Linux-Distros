@@ -1,0 +1,51 @@
+## Configuraciones post-restauración
+
+Todas estas configuraciones deben hacerse en el liveCD que más le guste.
+
+Si usted formateó su partición Raíz y Home, el UUID ha cambiado y tendrá que actualizar su archivo "fstab" con los nuevos uuid's correspondientes a cada partición, de lo contrario, probablemente su sistema tendrá problemas para arrancar. No obstante si su fstab no está configurado con UUID y simplemente está con "/dev/sdx" Probablemente no sea necesario actualizar el archivo.
+
+Reinstalando el Grub
+Éstos scripts fueron escritos para sistemas que ya cuenten con el firmware UEFI, a continuación se mostrarán varios ejemplos para reinstalar el grub en varias distribuciones conocidas.
+
+DEBIAN
+En su liveCD abra una terminal y escriba lo siguiente como usuario root
+mkdir /mnt/debian
+mount /dev/sdx /mnt/debian
+mount /dev/sdx /mnt/debian/boot/efi
+mount --bind /dev /mnt/debian/dev && mount --bind /dev/pts /mnt/debian/dev/pts && mount --bind /proc /mnt/debian/proc && mount --bind /sys /mnt/debian/sys
+chroot /mnt/debian /bin/bash
+su -
+grub-install --efi-directory=/boot/efi --bootloader-id=debian --target=x86_64-efi
+update-grub
+
+UBUNTU y derivadas
+En su liveCD abra una terminal y escriba lo siguiente como usuario root
+mkdir /mnt/ubuntu
+mount /dev/sdx /mnt/ubuntu
+mount /dev/sdx /mnt/ubuntu/boot/efi
+mount --bind /dev /mnt/ubuntu/dev && mount --bind /dev/pts /mnt/ubuntu/dev/pts && mount --bind /proc /mnt/ubuntu/proc && mount --bind /sys /mnt/ubuntu/sys
+chroot /mnt/ubuntu /bin/bash
+grub-install --efi-directory=/boot/efi --bootloader-id=ubuntu --target=x86_64-efi
+update-grub
+
+Manjaro Linux
+En su liveCD abra una terminal y escriba lo siguiente como usuario root
+mkdir /mnt/manjaro
+mount /dev/sdx /mnt/manjaro
+mount /dev/sdx /mnt/manjaro/boot/efi
+mount --bind /dev /mnt/manjaro/dev && mount --bind /dev/pts /mnt/manjaro/dev/pts && mount --bind /proc /mnt/manjaro/proc && mount --bind /sys /mnt/manjaro/sys
+chroot /mnt/manjaro /bin/bash
+grub-install --efi-directory=/boot/efi --bootloader-id=manjaro --target=x86_64-efi
+update-grub
+
+Arch Linux
+En su liveCD abra una terminal y escriba lo siguiente como usuario root
+mkdir /mnt/arch
+mount /dev/sdx /mnt/arch
+mount /dev/sdx /mnt/arch/boot/efi
+mount --bind /dev /mnt/arch/dev && mount --bind /dev/pts /mnt/arch/dev/pts && mount --bind /proc /mnt/arch/proc && mount --bind /sys /mnt/arch/sys
+chroot /mnt/arch /bin/bash
+grub-install --efi-directory=/boot/efi --bootloader-id=arch --target=x86_64-efi
+grub-mkconfig -o /boot/grub/grub.cfg
+
+Para otras puede ver la documentación de la distribución que necesite.
