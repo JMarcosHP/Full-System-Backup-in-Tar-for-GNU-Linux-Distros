@@ -1,3 +1,8 @@
+##
+## @Author      Jehú Marcos Herrera Puentes
+## @Copyright   Copyright © Jehú Marcos Herrera Puentes
+## @License     https://www.gnu.org/licenses/gpl-3.0.html
+
 ## Configuraciones post-restauración
 
 Todas estas configuraciones deben hacerse en el liveCD que más le guste.
