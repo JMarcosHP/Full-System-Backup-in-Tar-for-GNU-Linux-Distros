@@ -66,15 +66,7 @@ mkdir $destino/run
 mkdir $destino/media
 mkdir $destino/var/log
 mkdir $destino/var/tmp
-chmod 777 $destino/tmp
-chmod 777 $destino/proc
-chmod 777 $destino/mnt
-chmod 777 $destino/dev
-chmod 777 $destino/sys
-chmod 777 $destino/run
-chmod 777 $destino/media
-chmod 777 $destino/var/log
-chmod 777 $destino/var/tmp
+chmod 1777 $destino/tmp
 clear
 
 read -p "Se han creado los directorios correctamente"
