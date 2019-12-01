@@ -3,6 +3,7 @@
 ## @Author	Jehú Marcos Herrera Puentes
 ## @Copyright	Copyright © Jehú Marcos Herrera Puentes
 ## @License	https://www.gnu.org/licenses/gpl-3.0.html
+## @Github      https://github.com/JMarcosHP
 
 ##------------------------
 ##--	Variables	--
