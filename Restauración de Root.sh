@@ -11,9 +11,9 @@
 username=$(whoami)
 fecha=$(date +%d-%m-%Y)
 hora=$(date +%I:%M)
-nombre$=Backup
-origen$=""
-destino$=""
+nombre=Backup
+origen=""
+destino=""
 ##------------------------
 
 ## Comprobación de Root
