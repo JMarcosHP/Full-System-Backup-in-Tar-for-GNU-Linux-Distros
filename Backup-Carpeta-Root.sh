@@ -70,7 +70,7 @@ tar -cvpzf $destino/$nombre'_'$username'_'$hora'_'$fecha.tar.bz2 \
 --exclude=/boot/EFI \
 --exclude=/var/log \
 --exclude=/var/tmp \
---exclude=/var/cache/apt/archives \
+--exclude=/var/cache/apt \
 --exclude=/var/cache/pacman/pkg \
 --exclude=/home \
 --exclude=/root/.local/share/Trash /
