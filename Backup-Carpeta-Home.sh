@@ -49,7 +49,7 @@ tar -cvpzf $destino/$nombre'_'$hora'_'$fecha.tar.bz2 \
 --exclude=/home/*/.local/share/Trash /home
 
 clear
-echo "El backup se ha completado correctamente, recuerda montar tu partición de Home para restaurarla si es que la tienes, o simplemente descomprime el archivo en la carpeta raíz con: ~# tar -xvpzf /RUTA/Backup.tar.bz2 -C /punto de montaje/ --xattrs-include='*.*' --numeric-owner"
+echo "El backup se ha completado correctamente"
 
 read -p "Pulsa cualquier tecla para salir"
 clear

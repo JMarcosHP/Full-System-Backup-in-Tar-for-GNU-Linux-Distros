@@ -31,7 +31,7 @@ read -p "Introduce la ruta para descomprimir el archivo --> " destino
 tar -xvpzf $origen -C $destino --numeric-owner
 clear
 
-echo "A finalizado la restauración de tu carpeta Home correctamente"
+echo "A finalizado la restauración de la carpeta Home correctamente"
 read -p "Pulsa cualquier tecla para salir"
 clear
 exit 0
